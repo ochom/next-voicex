@@ -1,8 +1,6 @@
 "use client";
 
-import { ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
-import React from "react";
 
 const IllustrationWrapper = styled.div(({ theme }) => ({
   width: "100%",
@@ -39,18 +37,10 @@ const LoginContainer = styled.div`
   align-content: center;
 `;
 
-const theme = {
-  colors: {
-    primary: "hotpink",
-  },
-};
-
 export default function LoginLayout({ children }) {
   return (
-    <ThemeProvider theme={theme}>
-      <LoginContainer>
-        <IllustrationWrapper>{children}</IllustrationWrapper>
-      </LoginContainer>
-    </ThemeProvider>
+    <LoginContainer>
+      <IllustrationWrapper>{children}</IllustrationWrapper>
+    </LoginContainer>
   );
 }
